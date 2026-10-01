@@ -1,0 +1,280 @@
+export interface Sponsor {
+  id: string;
+  name: string;
+  logo: string;
+  url: string;
+  keywords: string[];
+  description: string;
+}
+
+const base = import.meta.env.BASE_URL || '/';
+
+export const SPONSORS: Sponsor[] = [
+  // 1. Shipaton (First item as required)
+  {
+    id: 'shipaton',
+    name: 'Shipaton',
+    logo: `${base}assets/wordmark-with-head.svg`,
+    url: 'https://shipaton.com',
+    keywords: ['ship', 'launch', 'hackathon', 'momentum', 'builder', 'incubator', 'student', 'project', 'apps', 'website', 'web'],
+    description: 'The global student hackathon & accelerator powering student innovation.',
+  },
+
+  // 32 Sponsors from sponsors/ folder
+  {
+    id: 'airbridge',
+    name: 'Airbridge',
+    logo: `${base}sponsors/Airbridge.svg`,
+    url: 'https://www.airbridge.io',
+    keywords: ['attribution', 'analytics', 'marketing', 'tracking', 'mmp', 'growth', 'campaign'],
+    description: 'Unified mobile measurement and marketing attribution platform.',
+  },
+  {
+    id: 'appfollow',
+    name: 'AppFollow',
+    logo: `${base}sponsors/appfollow.svg`,
+    url: 'https://appfollow.io',
+    keywords: ['reviews', 'aso', 'app store', 'feedback', 'ratings', 'monitoring', 'customer'],
+    description: 'App review management, competitor insights, and ASO intelligence.',
+  },
+  {
+    id: 'appscreens',
+    name: 'AppScreens',
+    logo: `${base}sponsors/appscreens.svg`,
+    url: 'https://appscreens.com',
+    keywords: ['screenshots', 'design', 'app store', 'mockup', 'graphics', 'store listing', 'assets'],
+    description: 'App Store and Google Play screenshot generator and design suite.',
+  },
+  {
+    id: 'appstack',
+    name: 'AppStack',
+    logo: `${base}sponsors/appstack.svg`,
+    url: 'https://appstack.io',
+    keywords: ['stack', 'growth', 'mobile', 'monetization', 'sdk', 'tools', 'infrastructure'],
+    description: 'All-in-one growth and development stack for modern mobile apps.',
+  },
+  {
+    id: 'apptweak',
+    name: 'AppTweak',
+    logo: `${base}sponsors/apptweak.svg`,
+    url: 'https://www.apptweak.com',
+    keywords: ['aso', 'keywords', 'search optimization', 'competitor intelligence', 'ranking', 'app store'],
+    description: 'Leading ASO tool powered by data science for store visibility.',
+  },
+  {
+    id: 'argent',
+    name: 'Argent',
+    logo: `${base}sponsors/argent.svg`,
+    url: 'https://www.argent.xyz',
+    keywords: ['wallet', 'crypto', 'web3', 'starknet', 'ethereum', 'defi', 'blockchain', 'identity'],
+    description: 'Smart contract wallet built for decentralized finance and Starknet.',
+  },
+  {
+    id: 'asapty',
+    name: 'Asapty',
+    logo: `${base}sponsors/asapty.svg`,
+    url: 'https://asapty.com',
+    keywords: ['ads', 'apple search ads', 'asa', 'marketing', 'ad automation', 'user acquisition'],
+    description: 'Apple Search Ads automation and bid optimization for iOS apps.',
+  },
+  {
+    id: 'bitrig',
+    name: 'Bitrig',
+    logo: `${base}sponsors/bitrig.png`,
+    url: 'https://bitrig.io', /* TODO: verify URL if different */
+    keywords: ['testing', 'ci/cd', 'mobile testing', 'device farm', 'automation', 'qa', 'build'],
+    description: 'Automated test execution and cloud device infrastructure for mobile builders.',
+  },
+  {
+    id: 'codemagic',
+    name: 'Codemagic',
+    logo: `${base}sponsors/codemagic.svg`,
+    url: 'https://codemagic.io',
+    keywords: ['ci/cd', 'build', 'pipeline', 'automation', 'flutter', 'react native', 'ios', 'android', 'deploy'],
+    description: 'Continuous integration and delivery specialized for mobile apps.',
+  },
+  {
+    id: 'elevenlabs',
+    name: 'ElevenLabs',
+    logo: `${base}sponsors/elevenlabs.svg`,
+    url: 'https://elevenlabs.io',
+    keywords: ['voice', 'audio', 'speech', 'tts', 'text to speech', 'ai voice', 'sound', 'dubbing'],
+    description: 'Prime generative AI voice, text-to-speech, and audio cloning models.',
+  },
+  {
+    id: 'emergent-black',
+    name: 'Emergent',
+    logo: `${base}sponsors/emergent-black.svg`,
+    url: 'https://emergent.sh', /* TODO: verify URL if different */
+    keywords: ['ai', 'agent', 'llm', 'automation', 'workflow', 'orchestration', 'developer'],
+    description: 'Agentic AI developer platform for intelligent workflows.',
+  },
+  {
+    id: 'expo',
+    name: 'Expo',
+    logo: `${base}sponsors/expo.svg`,
+    url: 'https://expo.dev',
+    keywords: ['react native', 'mobile', 'cross-platform', 'ios', 'android', 'javascript', 'typescript', 'eas'],
+    description: 'The standard framework for building universal React Native mobile applications.',
+  },
+  {
+    id: 'fload',
+    name: 'Fload',
+    logo: `${base}sponsors/fload.svg`,
+    url: 'https://fload.dev', /* TODO: verify URL if different */
+    keywords: ['flutter', 'ui', 'state', 'mobile', 'components', 'frontend', 'load'],
+    description: 'Modern UI toolkit and rapid prototyping utilities for mobile engineers.',
+  },
+  {
+    id: 'galaxy-store',
+    name: 'Samsung Galaxy Store',
+    logo: `${base}sponsors/galaxy-store.svg`,
+    url: 'https://galaxystore.samsung.com',
+    keywords: ['samsung', 'store', 'distribution', 'android', 'publishing', 'app store', 'galaxy'],
+    description: 'Official app distribution platform reaching millions of Samsung Galaxy devices.',
+  },
+  {
+    id: 'google-admob',
+    name: 'Google AdMob',
+    logo: `${base}sponsors/google-admob.svg`,
+    url: 'https://admob.google.com',
+    keywords: ['ads', 'monetization', 'revenue', 'banners', 'interstitials', 'rewarded', 'google'],
+    description: 'Mobile app advertising and monetization platform by Google.',
+  },
+  {
+    id: 'jetbrains',
+    name: 'JetBrains',
+    logo: `${base}sponsors/jetbrains.svg`,
+    url: 'https://www.jetbrains.com',
+    keywords: ['ide', 'kotlin', 'intellij', 'editor', 'developer', 'tools', 'code', 'fleet'],
+    description: 'Industry-standard developer IDEs including IntelliJ, WebStorm, and creators of Kotlin.',
+  },
+  {
+    id: 'lance',
+    name: 'LanceDB',
+    logo: `${base}sponsors/lance.svg`,
+    url: 'https://lancedb.com',
+    keywords: ['vector', 'database', 'ai', 'search', 'embeddings', 'rag', 'llm', 'storage'],
+    description: 'Developer-friendly serverless vector database for AI and semantic search.',
+  },
+  {
+    id: 'layers',
+    name: 'Layers',
+    logo: `${base}sponsors/layers.svg`,
+    url: 'https://layers.to',
+    keywords: ['design', 'portfolio', 'ui/ux', 'showcase', 'community', 'inspiration', 'creatives'],
+    description: 'Next-generation design community and creative portfolio showcase.',
+  },
+  {
+    id: 'limrun',
+    name: 'Limrun',
+    logo: `${base}sponsors/limrun.svg`,
+    url: 'https://limrun.com', /* TODO: verify URL if different */
+    keywords: ['serverless', 'cloud', 'compute', 'backend', 'deploy', 'containers', 'runtime', 'website', 'web'],
+    description: 'Fast, lightweight serverless compute and edge runtime engine.',
+  },
+  {
+    id: 'linearity',
+    name: 'Linearity',
+    logo: `${base}sponsors/linearity.svg`,
+    url: 'https://www.linearity.org',
+    keywords: ['vector', 'design', 'animation', 'graphics', 'illustration', 'curve', 'move'],
+    description: 'Next-gen vector graphic design (Linearity Curve) and animation (Linearity Move).',
+  },
+  {
+    id: 'mobbin',
+    name: 'Mobbin',
+    logo: `${base}sponsors/mobbin.svg`,
+    url: 'https://mobbin.com',
+    keywords: ['design', 'ui', 'ux', 'inspiration', 'patterns', 'flows', 'screens', 'mobile design', 'web design', 'website'],
+    description: 'The world’s largest UI and UX design pattern library for mobile and web apps.',
+  },
+  {
+    id: 'moises',
+    name: 'Moises',
+    logo: `${base}sponsors/moises.svg`,
+    url: 'https://moises.ai',
+    keywords: ['music', 'audio', 'ai music', 'stems', 'sound', 'vocal removal', 'pitch', 'musician'],
+    description: 'AI music platform for audio stem separation, mastering, and musician tools.',
+  },
+  {
+    id: 'musixmatch',
+    name: 'Musixmatch',
+    logo: `${base}sponsors/musixmatch.svg`,
+    url: 'https://www.musixmatch.com',
+    keywords: ['lyrics', 'music', 'audio', 'songs', 'sync', 'catalog', 'metadata'],
+    description: 'World’s largest lyrics catalog and synchronized music metadata API.',
+  },
+  {
+    id: 'noise',
+    name: 'Noise',
+    logo: `${base}sponsors/noise.svg`,
+    url: 'https://noise.app', /* TODO: verify URL if different */
+    keywords: ['audio', 'social', 'community', 'music', 'feed', 'chat', 'sound'],
+    description: 'Social audio platform connecting listeners and independent creators.',
+  },
+  {
+    id: 'onesignal',
+    name: 'OneSignal',
+    logo: `${base}sponsors/onesignal.svg`,
+    url: 'https://onesignal.com',
+    keywords: ['notifications', 'push', 'messaging', 'engagement', 'email', 'sms', 'in-app'],
+    description: 'Omnichannel customer messaging: mobile push, in-app alerts, and SMS.',
+  },
+  {
+    id: 'openrouter',
+    name: 'OpenRouter',
+    logo: `${base}sponsors/openrouter.png`,
+    url: 'https://openrouter.ai',
+    keywords: ['llm', 'ai', 'models', 'api', 'gpt', 'claude', 'llama', 'gateway', 'inference'],
+    description: 'Unified AI gateway providing standard API access to hundreds of LLMs.',
+  },
+  {
+    id: 'paddle',
+    name: 'Paddle',
+    logo: `${base}sponsors/paddle.svg`,
+    url: 'https://www.paddle.com',
+    keywords: ['payments', 'billing', 'subscriptions', 'checkout', 'revenue', 'saas', 'merchant'],
+    description: 'Complete Merchant of Record payments and subscription billing infrastructure.',
+  },
+  {
+    id: 'replit',
+    name: 'Replit',
+    logo: `${base}sponsors/replit.svg`,
+    url: 'https://replit.com',
+    keywords: ['build', 'code', 'host', 'ide', 'cloud', 'agent', 'fullstack', 'deployment', 'website', 'web'],
+    description: 'Software creation platform with collaborative cloud IDE, AI agent, and hosting.',
+  },
+  {
+    id: 'sentry',
+    name: 'Sentry',
+    logo: `${base}sponsors/sentry.svg`,
+    url: 'https://sentry.io',
+    keywords: ['errors', 'monitoring', 'crash', 'performance', 'logs', 'debugging', 'traces'],
+    description: 'Code-level error and performance monitoring for frontend and backend apps.',
+  },
+  {
+    id: 'stripe',
+    name: 'Stripe',
+    logo: `${base}sponsors/stripe.svg`,
+    url: 'https://stripe.com',
+    keywords: ['payments', 'finance', 'credit card', 'billing', 'checkout', 'money', 'banking'],
+    description: 'Global financial infrastructure and payments gateway for the internet.',
+  },
+  {
+    id: 'tenjin',
+    name: 'Tenjin',
+    logo: `${base}sponsors/tenjin.svg`,
+    url: 'https://www.tenjin.com',
+    keywords: ['attribution', 'ad revenue', 'analytics', 'roi', 'marketing', 'growth', 'gaming'],
+    description: 'Mobile attribution and ad ROI analytics suite for developers and gaming studios.',
+  },
+  {
+    id: 'tminus',
+    name: 'T-Minus',
+    logo: `${base}sponsors/tminus.svg`,
+    url: 'https://tminus.dev', /* TODO: verify URL if different */
+    keywords: ['launch', 'countdown', 'schedule', 'release', 'shipping', 'timeline', 'milestones'],
+    description: 'Project launch countdown and milestone coordination tool for indie developers.',
+  },
+];

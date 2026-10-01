@@ -1,0 +1,58 @@
+# Secrets & Environment Variables (NEVER commit to public repositories)
+.env
+.env.*
+*.env
+!.env.example
+*.pem
+*.key
+*.keystore
+*.jks
+
+# Dependencies
+node_modules/
+.pnpm-store/
+.npm
+.yarn/
+
+# Build & Compilation Outputs
+dist/
+dist-ssr/
+build/
+out/
+.rollup.cache/
+artifacts/shipabyte/dist/
+artifacts/api-server/dist/
+artifacts/shipabyte/android/app/src/main/assets/public/
+
+# Android Build Artifacts & Caches
+.gradle/
+**/build/
+**/.gradle/
+**/local.properties
+*.apk
+*.aab
+captures/
+.cxx/
+
+# Binaries & Large Archives
+tools/
+*.zip
+*.tar.gz
+
+# Logs
+logs/
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+
+# OS & Editor Files
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/*
+!.vscode/settings.json
+!.vscode/extensions.json
+*.sublime-project
+*.sublime-workspace

@@ -1,0 +1,28 @@
+kind = "web"
+previewPath = "/"
+title = "Shipabyte"
+description = "A mobile-first Shipaton hackathon experience that turns plastic recycling into megabytes, showcases sponsors, and lets builders submit and back apps toward a shared Play Store fund."
+version = "1.0.0"
+id = "artifacts/shipabyte"
+router = "path"
+
+[[services]]
+name = "web"
+paths = [ "/" ]
+localPort = 18714
+
+[services.development]
+run = "pnpm --filter @workspace/shipabyte run dev"
+
+[services.production]
+build = [ "pnpm", "--filter", "@workspace/shipabyte", "run", "build" ]
+serve = "static"
+publicDir = "artifacts/shipabyte/dist/public"
+
+[[services.production.rewrites]]
+from = "/*"
+to = "/index.html"
+
+[services.env]
+PORT = "18714"
+BASE_PATH = "/"

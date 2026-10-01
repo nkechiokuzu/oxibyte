@@ -1,0 +1,90 @@
+export type Country = { name: string; iso2: string; dialCode: string };
+
+// Regional indicator symbols: each letter A-Z maps to a Unicode codepoint
+// that renders as part of a flag emoji when two are combined (e.g. "NG" ->
+// 🇳🇬). Computed rather than hand-typed per country, so it can't typo.
+export function flagEmoji(iso2: string): string {
+  return iso2
+    .toUpperCase()
+    .replace(/./g, (char) => String.fromCodePoint(127397 + char.charCodeAt(0)));
+}
+
+// Covers the large majority of real-world usage. Not a certified ISO/ITU
+// list — if a country is missing, phone numbers for it can still be
+// entered by picking any country and typing the full number including its
+// code in the digits field (validation only checks the final E.164 shape).
+export const countries: Country[] = [
+  { name: 'Nigeria', iso2: 'NG', dialCode: '234' },
+  { name: 'United States', iso2: 'US', dialCode: '1' },
+  { name: 'Canada', iso2: 'CA', dialCode: '1' },
+  { name: 'United Kingdom', iso2: 'GB', dialCode: '44' },
+  { name: 'India', iso2: 'IN', dialCode: '91' },
+  { name: 'Pakistan', iso2: 'PK', dialCode: '92' },
+  { name: 'South Africa', iso2: 'ZA', dialCode: '27' },
+  { name: 'Ghana', iso2: 'GH', dialCode: '233' },
+  { name: 'Kenya', iso2: 'KE', dialCode: '254' },
+  { name: 'Egypt', iso2: 'EG', dialCode: '20' },
+  { name: 'Morocco', iso2: 'MA', dialCode: '212' },
+  { name: 'Ethiopia', iso2: 'ET', dialCode: '251' },
+  { name: 'Tanzania', iso2: 'TZ', dialCode: '255' },
+  { name: 'Uganda', iso2: 'UG', dialCode: '256' },
+  { name: 'Cameroon', iso2: 'CM', dialCode: '237' },
+  { name: 'Senegal', iso2: 'SN', dialCode: '221' },
+  { name: 'Ivory Coast', iso2: 'CI', dialCode: '225' },
+  { name: 'Algeria', iso2: 'DZ', dialCode: '213' },
+  { name: 'Zimbabwe', iso2: 'ZW', dialCode: '263' },
+  { name: 'Rwanda', iso2: 'RW', dialCode: '250' },
+  { name: 'Germany', iso2: 'DE', dialCode: '49' },
+  { name: 'France', iso2: 'FR', dialCode: '33' },
+  { name: 'Spain', iso2: 'ES', dialCode: '34' },
+  { name: 'Italy', iso2: 'IT', dialCode: '39' },
+  { name: 'Portugal', iso2: 'PT', dialCode: '351' },
+  { name: 'Netherlands', iso2: 'NL', dialCode: '31' },
+  { name: 'Belgium', iso2: 'BE', dialCode: '32' },
+  { name: 'Switzerland', iso2: 'CH', dialCode: '41' },
+  { name: 'Austria', iso2: 'AT', dialCode: '43' },
+  { name: 'Ireland', iso2: 'IE', dialCode: '353' },
+  { name: 'Sweden', iso2: 'SE', dialCode: '46' },
+  { name: 'Norway', iso2: 'NO', dialCode: '47' },
+  { name: 'Denmark', iso2: 'DK', dialCode: '45' },
+  { name: 'Finland', iso2: 'FI', dialCode: '358' },
+  { name: 'Poland', iso2: 'PL', dialCode: '48' },
+  { name: 'Greece', iso2: 'GR', dialCode: '30' },
+  { name: 'Turkey', iso2: 'TR', dialCode: '90' },
+  { name: 'Russia', iso2: 'RU', dialCode: '7' },
+  { name: 'Ukraine', iso2: 'UA', dialCode: '380' },
+  { name: 'Romania', iso2: 'RO', dialCode: '40' },
+  { name: 'Czechia', iso2: 'CZ', dialCode: '420' },
+  { name: 'Hungary', iso2: 'HU', dialCode: '36' },
+  { name: 'China', iso2: 'CN', dialCode: '86' },
+  { name: 'Japan', iso2: 'JP', dialCode: '81' },
+  { name: 'South Korea', iso2: 'KR', dialCode: '82' },
+  { name: 'Indonesia', iso2: 'ID', dialCode: '62' },
+  { name: 'Philippines', iso2: 'PH', dialCode: '63' },
+  { name: 'Vietnam', iso2: 'VN', dialCode: '84' },
+  { name: 'Thailand', iso2: 'TH', dialCode: '66' },
+  { name: 'Malaysia', iso2: 'MY', dialCode: '60' },
+  { name: 'Singapore', iso2: 'SG', dialCode: '65' },
+  { name: 'Bangladesh', iso2: 'BD', dialCode: '880' },
+  { name: 'Sri Lanka', iso2: 'LK', dialCode: '94' },
+  { name: 'Nepal', iso2: 'NP', dialCode: '977' },
+  { name: 'United Arab Emirates', iso2: 'AE', dialCode: '971' },
+  { name: 'Saudi Arabia', iso2: 'SA', dialCode: '966' },
+  { name: 'Qatar', iso2: 'QA', dialCode: '974' },
+  { name: 'Israel', iso2: 'IL', dialCode: '972' },
+  { name: 'Jordan', iso2: 'JO', dialCode: '962' },
+  { name: 'Lebanon', iso2: 'LB', dialCode: '961' },
+  { name: 'Iraq', iso2: 'IQ', dialCode: '964' },
+  { name: 'Iran', iso2: 'IR', dialCode: '98' },
+  { name: 'Australia', iso2: 'AU', dialCode: '61' },
+  { name: 'New Zealand', iso2: 'NZ', dialCode: '64' },
+  { name: 'Mexico', iso2: 'MX', dialCode: '52' },
+  { name: 'Brazil', iso2: 'BR', dialCode: '55' },
+  { name: 'Argentina', iso2: 'AR', dialCode: '54' },
+  { name: 'Chile', iso2: 'CL', dialCode: '56' },
+  { name: 'Colombia', iso2: 'CO', dialCode: '57' },
+  { name: 'Peru', iso2: 'PE', dialCode: '51' },
+  { name: 'Venezuela', iso2: 'VE', dialCode: '58' },
+  { name: 'Ecuador', iso2: 'EC', dialCode: '593' },
+  { name: 'Jamaica', iso2: 'JM', dialCode: '1876' },
+];
